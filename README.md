@@ -29,4 +29,4 @@ terraform apply -var 'credentials_path=<your_path>' -var 'project_name=<your_pro
 
 ## Destroying the cluster and node pools
 
-`terraform destroy`
+`terraform destroy -var 'credentials_path=<your_path>' -var 'project_name=<your_project>'`
