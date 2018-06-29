@@ -1,13 +1,11 @@
 variable "credentials_path" {
   type        = "string"
   description = "the path to your Google Cloud json credentials file."
-  default     = "/tmp/credentials.json"
 }
 
 variable "project_name" {
   type        = "string"
   description = "Google Cloud project name."
-  default     = "helmsman-demo"
 }
 
 variable "cluster_region" {
