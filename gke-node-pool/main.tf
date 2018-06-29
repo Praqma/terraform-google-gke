@@ -26,12 +26,9 @@ resource "google_container_node_pool" "np" {
     machine_type = "${var.pool_node_machine_type}"
 
     # tags are applied to each cluster node
-    tags = ["dev-cluster-node"]
+    tags = "${var.node_tags}"
 
     # kubernetes lables (key/value pairs)
-    labels {
-      env  = "dev"
-      pool = "pool1"
-    }
+    labels = "${var.node_labels}"
   }
 }

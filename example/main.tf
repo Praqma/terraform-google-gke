@@ -34,6 +34,12 @@ module "np" {
   source       = "github.com/Praqma/terraform-google-gke//gke-node-pool"
   cluster_name = "${module.gke.cluster_name}"
   cluster_zone = "${module.gke.cluster_zone}"
+  node_tags    = ["tag1", "tag2"]
+
+  node_labels = {
+    "key1" = "value1"
+    "key2" = "value2"
+  }
 }
 
 output "cluster_endpoint" {

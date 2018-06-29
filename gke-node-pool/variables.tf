@@ -50,3 +50,13 @@ variable "pool_node_machine_type" {
   default     = "n1-standard-1"
   description = "The machine type for nodes in the node pool."
 }
+
+variable "node_tags" {
+  type        = "list"
+  description = "list of tags to be applied all nodes in the pool."
+}
+
+variable "node_labels" {
+  type        = "map"
+  description = "map of key/value labels to be applied to all nodes in this pool."
+}

@@ -25,4 +25,10 @@ module "np" {
   source       = "../"
   cluster_name = "my-cluster"     # this is the name of an existing cluster
   cluster_zone = "europe-west1-b" # the zone where the cluster above is located
+  node_tags    = ["tag1", "tag2"]
+
+  node_labels = {
+    "key1" = "value1"
+    "key2" = "value2"
+  }
 }
