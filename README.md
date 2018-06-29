@@ -1,6 +1,10 @@
-# Usage 
+# Terraform modules for creating Google gke clusters & node pools 
+
+## Usage
 
 ## Setup your Google Cloud sevice account key
+
+> you can perform the steps below in command line with gcloud. 
 
 - In your Google cloud web console browse to `IAM & Admin -> Service accounts`
 - Click on `CREATE SERVCIE ACCOUNT` and give it a name.
@@ -10,15 +14,19 @@
    - Service Account User
    - Storage Object Creator
 
-## Terraform
+## Try the example
 
-`terraform init`
+```shell
+cd example
 
-`terraform plan`
+terraform init
 
-`terraform deploy`
+terraform plan -var 'credentials_path=<your_path>' -var 'project_name=<your_project>'
 
-## Destroying the cluster
+terraform apply -var 'credentials_path=<your_path>' -var 'project_name=<your_project>'
+
+```
+
+## Destroying the cluster and node pools
 
 `terraform destroy`
-
